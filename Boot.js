@@ -6,7 +6,11 @@ RabbitDefender.Boot.prototype = {
 //Define functions needed for phaser development
 
   //Automatically looks for preload at start
-  preload: function(){},
+  preload: function(){
+    this.load.image('preloaderbar','images/loader_bar.png');
+    this.load.image('titleimage','images/title_image.png');
+
+  },
   create: function(){
 
     this.input.maxPointers = 1;
@@ -20,5 +24,7 @@ RabbitDefender.Boot.prototype = {
     this.scale.setScreenSize(true);
     this.input.addPointer();
     this.stage.backgroundColor = '#e67fb9';
+
+    this.state.start('Preloader');
   },
 };
