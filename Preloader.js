@@ -8,7 +8,15 @@ RabbitDefender.Preloader = function(game){
 
 RabbitDefender.Preloader.prototype = {
 
-  preload: function(){},
+  preload: function(){
+    this.preloadBar = this.add.sprite(
+      this.world.centerX,this.world.centerY,'preloaderbar');
+    this.preloadBar.anchor.setTo(0.5,0.5);
+    this.load.setPreloadSprite(this.preloadBar);
+    this.titleText = this.add.image(
+      this.world.centerX,this.world.centerY-220,'titleimage');
+    this.titleText.anchor.setTo(0.5,0.5);
+  },
 
   create: function(){},
 
