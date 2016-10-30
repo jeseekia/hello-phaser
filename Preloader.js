@@ -16,6 +16,9 @@ RabbitDefender.Preloader.prototype = {
     this.titleText = this.add.image(
       this.world.centerX,this.world.centerY-220,'titleimage');
     this.titleText.anchor.setTo(0.5,0.5);
+
+    this.load.image('titlescreen','images/title_bg.png');
+    this.load.bitmapFont('eight-bit-wonder','fonts/eightbitwonder.png','fonts/eightbitwonder.fnt');
   },
 
   create: function(){
@@ -24,5 +27,6 @@ RabbitDefender.Preloader.prototype = {
 
   update: function(){
     this.ready = true;
+    this.state.start('StartMenu');
   }
 };
