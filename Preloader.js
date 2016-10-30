@@ -22,5 +22,7 @@ RabbitDefender.Preloader.prototype = {
     this.preloadBar.cropEnabled = false;
   },
 
-  update: function(){}
+  update: function(){
+    this.ready = true;
+  }
 };
