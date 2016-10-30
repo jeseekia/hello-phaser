@@ -18,7 +18,9 @@ RabbitDefender.Preloader.prototype = {
     this.titleText.anchor.setTo(0.5,0.5);
   },
 
-  create: function(){},
+  create: function(){
+    this.preloadBar.cropEnabled = false;
+  },
 
   update: function(){}
 };
