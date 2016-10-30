@@ -21,7 +21,7 @@ RabbitDefender.Boot.prototype = {
     this.scale.pageAlignHorizontally = true;
     this.pageAlightVertically = true;
     this.stage.forcePortrait = true;
-    this.scale.setScreenSize(true);
+    this.scale.updateLayout(true);
     this.input.addPointer();
     this.stage.backgroundColor = '#e67fb9';
 
