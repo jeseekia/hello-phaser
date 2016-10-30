@@ -5,6 +5,7 @@
         <title>hello phaser!</title>
         <script src="node_modules/phaser/build/phaser.min.js"></script>
         <script src="Boot.js"></script>
+        <script src="Preloader.js"></script>
     </head>
     <body>
 
@@ -16,8 +17,10 @@
 
     window.onload = function() {
 
-        var game = new Phaser.Game(560, 960, Phaser.AUTO, 'gameContainer', { preload: preload, create: create });
-        game.state.add('Boot','RabbitDefender.Boot');
+        var game = new Phaser.Game(560, 960, Phaser.AUTO, 'gameContainer');
+        game.state.add('Boot',RabbitDefender.Boot);
+        game.state.add('Preloader', RabbitDefender.Preloader);
+        game.state.start('Boot');
 
 
     };
